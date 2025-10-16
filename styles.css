@@ -1,0 +1,366 @@
+:root {
+    --main-color-1: #ffffff ;
+    --main-color-2: #d9d9d9;
+    --theme-color-1: #353535 ;
+    --theme-color-2: #3c6e71;
+    --theme-color-3: #284b63;
+    --gradient: linear-gradient(159deg,rgba(53, 53, 53, 1) 14%, rgba(60, 110, 113, 1) 53%, rgba(40, 75, 99, 1) 77%);
+    --font-main-titles:'Oswald', sans-serif; 
+    --font-sec-titles:'Montserrat', sans-serif; 
+    --font-p:'Inter', sans-serif; 
+}
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-p);
+    background-color: var(--main-color-1);
+    height: 100vh;
+    
+}
+
+
+
+/* partie header */
+header {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  
+}
+
+header p {
+    font-size: 2rem;
+    color: var(--main-color-2);
+    font-style: var(--font-main-titles);
+    text-transform: uppercase;
+}
+
+.img-header {
+    height: 40vh;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+}
+
+header h1 {
+    color: var(--main-color-1);
+    font-size: 5rem;
+    font-family: var(--font-main-titles);
+    text-transform: uppercase;
+}
+
+header ul {
+   position: relative;
+   display: flex;
+   justify-content: space-evenly;
+   flex-direction: column;
+   gap: 20px;
+   margin-right: 20px;
+   list-style: none;
+   
+    
+
+   
+}
+
+header ul li a {
+    text-decoration: none;
+    color: var(--main-color-1);
+    font-family: var(--font-sec-titles);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+header ul li a:hover {
+    cursor: pointer;
+    color: var(--main-color-2);
+    text-decoration: underline;
+}
+
+
+
+/* section programme */
+.s-programme {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 20px;
+    font-size: 1.3rem;
+}
+
+h2 {
+    color: var(--theme-color-3);
+    font-family: var(--font-main-titles);
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: var(--font-sec-titles);
+    color: var(--theme-color-2);
+}
+
+
+.s-programme ul li {
+    font-family: var(--font-p);
+    color: var(--theme-color-1);
+}
+
+.horaire {
+    background-color: var(--main-color-2);
+    border-radius: 3px;
+}
+
+
+/* section cartes */
+.s-plan {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    background: var(--gradient);
+
+}
+
+.s-plan h2 {
+    color: var(--main-color-1);
+}
+
+.plan {
+    height: auto;
+    min-height: 400px;
+    width: 400px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-p {
+    padding-left: 20px;
+}
+
+.plan .img-carte {
+    height: 300px;
+    width: 300px; 
+    border-radius: 5%;
+}
+
+.s-plan p {
+    color: var(--main-color-1);
+    font-family: var(--font-p);
+    font-size: 1.5rem; ;
+}
+
+
+/* section favoris*/
+.s-favoris {
+
+    height: auto;
+    margin: 100px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: O 20px;
+   
+}
+
+.carte-favori {
+    height: 300px;
+    width: 250px;
+    border-radius: 20px;
+    background: var(--gradient);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+
+}
+
+.img-fav {
+    height: 200px;
+    width: 250px;
+    object-fit: cover;
+    border-radius:  20px 20px 0 0;
+}
+
+.s-favoris h3 {
+    color: var(--main-color-1);
+}
+
+.s-favoris p {
+    font-size: 0.7rem;
+    color: var(--main-color-2);
+}
+
+.carte-favori:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+
+/* section inscription*/
+.s-inscription {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px; 
+    padding: 20px;
+    text-align: justify;
+    margin-bottom: 200px;
+}
+
+.s-inscription p {
+    font-size:2rem ;
+    color: var(--theme-color-1);
+}
+
+.button {
+    min-width: 120px;
+    padding: 15px 30px;
+    border-radius: 12px;
+    border: none;
+    background-color: var(--theme-color-3);
+    color: var(--main-color-1);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: var(--theme-color-2);
+    transform: scale(1.05);
+
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height : 10vh;
+    background: var(--gradient);
+    color: var(--main-color-1);
+    font-size: 0.7rem;
+}
+
+footer a {
+    color: var(--main-color-2);
+    text-decoration: underline; 
+}
+footer a:hover {
+    cursor: pointer;
+}
+
+/* responsive */
+@media screen and (max-width: 1200px) {
+    header {
+        height: 35vh;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    .img-header {
+        height: 35vh;
+    }
+    
+    header h1 {
+        font-size: 3.5rem;
+        text-align: center;
+        margin-left: 0;
+    }
+    
+    header p {
+        font-size: 1.5rem;
+    }
+    
+    header ul {
+        flex-direction: row;
+        margin-right: 0;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    header ul li a {
+        font-size: 1.2rem;
+    }
+    
+    .s-programme {
+        min-height: auto;
+        padding: 40px 20px;
+        margin-top: 20px;
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    
+    .s-plan {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+    
+    .plan {
+        width: 100%;
+        max-width: 400px;
+        min-height: auto;
+    }
+    
+    .left-p {
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    .plan .img-carte {
+        height: 250px;
+        width: 250px;
+    }
+    
+    .s-plan p {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .s-favoris {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin-bottom: 200px;
+
+    }
+    
+    
+}
+
+
+
+
+
