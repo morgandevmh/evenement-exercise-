@@ -48,6 +48,7 @@ body {
 }
 .t-top:hover {
     cursor: pointer;
+    background-color: var(--theme-color-3);
     transform: scale(1.3);
 }
 
