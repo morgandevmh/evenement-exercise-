@@ -1,17 +1,24 @@
 :root {
-    --main-color-1: #ffffff ;
+    --main-color-1: #ffffff;
     --main-color-2: #d9d9d9;
-    --theme-color-1: #353535 ;
+    --theme-color-1: #353535;
     --theme-color-2: #3c6e71;
     --theme-color-3: #284b63;
     --gradient: linear-gradient(159deg,rgba(53, 53, 53, 1) 14%, rgba(60, 110, 113, 1) 53%, rgba(40, 75, 99, 1) 77%);
+    
     --font-main-titles:'Oswald', sans-serif; 
     --font-sec-titles:'Montserrat', sans-serif; 
-    --font-p:'Inter', sans-serif; 
+    --font-p:'Inter', sans-serif;
+    
+    --spacing-xs: 10px;
+    --spacing-s: 20px;
+    --spacing-m: 40px;
+    --spacing-l: 80px;
+    --spacing-xl: 120px;
 }
 
 * {
-    margin:0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -20,10 +27,7 @@ body {
     font-family: var(--font-p);
     background-color: var(--main-color-1);
     height: 100vh;
-    
 }
-
-
 
 /* partie header */
 header {
@@ -32,11 +36,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
-  
 }
+
 .left-header {
-    padding: 20px;
+    padding: var(--spacing-s);
 }
 
 header p {
@@ -66,13 +69,9 @@ header ul {
    display: flex;
    justify-content: space-evenly;
    flex-direction: column;
-   gap: 20px;
-   margin-right: 20px;
+   gap: var(--spacing-s);
+   margin-right: var(--spacing-s);
    list-style: none;
-   
-    
-
-   
 }
 
 header ul li a {
@@ -89,7 +88,24 @@ header ul li a:hover {
     text-decoration: underline;
 }
 
+/* section intro*/
+.intro {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+    gap: var(--spacing-m);
+    padding: var(--spacing-m);
+    margin-top: var(--spacing-l);
+}
 
+.intro p {
+    font-size: 1.4rem;
+    color: var(--theme-color-1);
+}
 
 /* section programme */
 .s-programme {
@@ -99,8 +115,9 @@ header ul li a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 30px;
-    gap: 20px;
+    gap: var(--spacing-s);
+    padding: var(--spacing-m);
+    margin-top: var(--spacing-l);
     font-size: 1.3rem;
 }
 
@@ -131,7 +148,6 @@ h3 {
     border-radius: 3px;
 }
 
-
 /* section cartes */
 .s-plan {
     display: flex;
@@ -139,7 +155,9 @@ h3 {
     align-items: center;
     flex-direction: row;
     background: var(--gradient);
-
+    padding: var(--spacing-m);
+    gap: var(--spacing-m);
+    margin-top: var(--spacing-m)
 }
 
 .s-plan h2 {
@@ -157,7 +175,11 @@ h3 {
 }
 
 .left-p {
-    padding-left: 20px;
+    padding-left: var(--spacing-s);
+    color: var(--main-color-2);
+}
+.left-p p:first-of-type {
+    text-decoration: underline;
 }
 
 .plan .img-carte {
@@ -169,21 +191,28 @@ h3 {
 .s-plan p {
     color: var(--main-color-1);
     font-family: var(--font-p);
-    font-size: 1.5rem; ;
+    font-size: 1.5rem;
 }
-
 
 /* section favoris*/
 .s-favoris {
+    margin-top: var(--spacing-xl);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 var(--spacing-xs);
+}
 
+.container-c-f {
     height: auto;
-    margin: 100px 20px;
+    margin: var(--spacing-l) var(--spacing-s);
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    padding: O 20px;
-   
+    padding: 0 var(--spacing-s);
+    gap: var(--spacing-s);
 }
 
 .carte-favori {
@@ -195,16 +224,15 @@ h3 {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
+    gap: var(--spacing-s);
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
-
 }
 
 .img-fav {
     height: 200px;
     width: 250px;
     object-fit: cover;
-    border-radius:  20px 20px 0 0;
+    border-radius: 20px 20px 0 0;
 }
 
 .s-favoris h3 {
@@ -222,7 +250,6 @@ h3 {
     cursor: pointer;
 }
 
-
 /* section inscription*/
 .s-inscription {
     height: auto;
@@ -231,14 +258,14 @@ h3 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 30px; 
-    padding: 40px;
     text-align: justify;
-    margin-bottom: 200px;
+    gap: var(--spacing-m);
+    padding: var(--spacing-m);
+    margin-top: var(--spacing-l);
 }
 
 .s-inscription p {
-    font-size:2rem ;
+    font-size: 1.4rem;
     color: var(--theme-color-1);
 }
 
@@ -259,28 +286,28 @@ h3 {
     cursor: pointer;
     background-color: var(--theme-color-2);
     transform: scale(1.05);
-
 }
 
 footer {
     display: flex;
     justify-content: center;
     align-items: end;
-    height : 10vh;
+    height: 10vh;
     background: var(--gradient);
     color: var(--main-color-1);
     font-size: 0.7rem;
+    margin-top: var(--spacing-l);
 }
 
 footer a {
     color: var(--main-color-2);
     text-decoration: underline; 
-    
 }
 
 footer p {
-    padding-bottom: 20px;
+    padding-bottom: var(--spacing-s);
 }
+
 footer a:hover {
     cursor: pointer;
 }
@@ -292,7 +319,7 @@ footer a:hover {
         flex-direction: column;
         justify-content: center;
         gap: 15px;
-        padding: 10px;
+        padding: var(--spacing-xs);
     }
     
     .img-header {
@@ -323,8 +350,8 @@ footer a:hover {
     
     .s-programme {
         min-height: auto;
-        padding: 40px 20px;
-        margin-top: 20px;
+        padding: var(--spacing-m) var(--spacing-s);
+        margin-top: var(--spacing-s);
     }
     
     h2 {
@@ -334,8 +361,8 @@ footer a:hover {
     
     .s-plan {
         flex-direction: column;
-        padding: 30px 20px;
-        gap: 30px;
+        padding: var(--spacing-m) var(--spacing-s);
+        gap: var(--spacing-m);
     }
     
     .plan {
@@ -359,18 +386,14 @@ footer a:hover {
         text-align: center;
     }
 
-    .s-favoris {
+    .container-c-f {
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: var(--spacing-s);
         justify-content: center;
-        margin-bottom: 200px;
-
+        margin-bottom: var(--spacing-xl);
     }
-    
-    
 }
-
 
 
 
