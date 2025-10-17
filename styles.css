@@ -35,6 +35,9 @@ header {
     
   
 }
+.left-header {
+    padding: 20px;
+}
 
 header p {
     font-size: 2rem;
@@ -114,14 +117,17 @@ h3 {
     color: var(--theme-color-2);
 }
 
+.s-programme ol {
+    list-style: none;
+}
 
-.s-programme ul li {
+.s-programme ol li {
     font-family: var(--font-p);
     color: var(--theme-color-1);
 }
 
 .horaire {
-    background-color: var(--main-color-2);
+    text-decoration: underline;
     border-radius: 3px;
 }
 
@@ -226,7 +232,7 @@ h3 {
     align-items: center;
     flex-direction: column;
     gap: 30px; 
-    padding: 20px;
+    padding: 40px;
     text-align: justify;
     margin-bottom: 200px;
 }
@@ -269,6 +275,11 @@ footer {
 footer a {
     color: var(--main-color-2);
     text-decoration: underline; 
+    
+}
+
+footer p {
+    padding-bottom: 20px;
 }
 footer a:hover {
     cursor: pointer;
