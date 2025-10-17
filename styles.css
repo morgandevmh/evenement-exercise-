@@ -116,7 +116,7 @@ header ul li a:hover {
     align-items: center;
     flex-direction: column;
     gap: var(--spacing-s);
-    padding: var(--spacing-m);
+    
     margin-top: var(--spacing-l);
     font-size: 1.3rem;
 }
@@ -177,9 +177,18 @@ h3 {
 .left-p {
     padding-left: var(--spacing-s);
     color: var(--main-color-2);
+    font-size: 1.1rem;
+    
 }
 .left-p p:first-of-type {
     text-decoration: underline;
+    font-size: 1.4rem;
+}
+
+.iframe-carte {
+    padding: 10px;
+    border-radius: 20px;
+    width: 250px;
 }
 
 .plan .img-carte {
